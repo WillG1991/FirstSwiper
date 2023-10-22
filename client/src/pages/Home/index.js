@@ -37,11 +37,17 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    if (loggedIn) {
-      // Navigate to the dashboard screen
-      navigation.navigate("Dashboards");
-    }
-  }, [loggedIn, navigation]);
+    const checkLoginStatus = async () => {
+      const isLoggedIn = await Auth.loggedIn();
+      if (isLoggedIn) {
+        // Navigate to the dashboard screen
+        navigation.navigate("Dashboards");
+      }
+      setLoading(false);
+    };
+  
+    checkLoginStatus();
+  }, [navigation]);
 
   return (
     <View style={styles.container}>
