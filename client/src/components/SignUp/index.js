@@ -8,6 +8,7 @@ import StepThree from './StepThree';
 
 const Signup = () => {
   const [activeStep, setActiveStep] = useState(0);
+  const steps = ["Step One", "Step Two", "Step Three", "Review"];
   const [userSignedup, setUserSignedup] = useState(null);
   const [formState, setFormState] = useState({
     username: "",

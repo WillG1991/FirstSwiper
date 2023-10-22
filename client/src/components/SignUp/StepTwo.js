@@ -13,6 +13,8 @@ import EditPhotos from '../EditProfile/editPhotos';
 
 const StepTwo = ({ formState, onStepTwoChange }) => {
   const [photoURL, setPhotoURL] = useState([null, null, null, null]);
+  const [selectableKinks, setSelectableKinks] = useState([]);
+
 
   const handleChange = (name, value) => {
     console.log(name, ': ', value);

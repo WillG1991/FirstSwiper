@@ -9,6 +9,7 @@ import { getMainDefinition } from "@apollo/client/utilities";
 import { RecoilRoot } from "recoil";
 import Home from "./client/src/pages/Home"
 import LoginPage from "./client/src/pages/LoginPage";
+import Signup from "./client/src/components/SignUp";
 import Dashboards from "./client/src/pages/Dashboards"
 import Profile from "./client/src/components/Profile";
 import PageNotFound from "./client/src/components/PageNotFound/index";
@@ -91,6 +92,7 @@ export default function App() {
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Dashboards" component={Dashboards} />
             <Stack.Screen name="LoginPage" component={LoginPage} />
+            <Stack.Screen name="SignUp" component={Signup} />
             <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
             <Stack.Screen name="About" component={About} />
             <Stack.Screen name="Support" component={Support} />

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput } from 'react-native';
+import { View, Text, TextInput, Button } from 'react-native';
 
 const StepOne = ({ formState, onStepOneChange, stepOneError }) => {
   const [selectedImage, setSelectedImage] = useState(null);

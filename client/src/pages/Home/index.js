@@ -10,7 +10,7 @@ import Footer from "./Footer";
 const Home = () => {
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
-  const loggedIn = Auth.loggedIn();
+  // const loggedIn = Auth.loggedIn();
 
   useEffect(() => {
     const visitedBefore = "visited"; // Use async storage or a similar solution for persistent data in React Native
@@ -36,18 +36,18 @@ const Home = () => {
     return handleUnload;
   }, []);
 
-  useEffect(() => {
-    const checkLoginStatus = async () => {
-      const isLoggedIn = await Auth.loggedIn();
-      if (isLoggedIn) {
-        // Navigate to the dashboard screen
-        navigation.navigate("Dashboards");
-      }
-      setLoading(false);
-    };
+  // useEffect(() => {
+  //   const checkLoginStatus = async () => {
+  //     const isLoggedIn = await Auth.loggedIn();
+  //     if (isLoggedIn) {
+  //       // Navigate to the dashboard screen
+  //       navigation.navigate("Dashboards");
+  //     }
+  //     setLoading(false);
+  //   };
   
-    checkLoginStatus();
-  }, [navigation]);
+  //   checkLoginStatus();
+  // }, [navigation]);
 
   return (
     <View style={styles.container}>
