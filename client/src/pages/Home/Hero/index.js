@@ -4,6 +4,14 @@ import Logo from '../../../components/Logo';
 import badPhone from '../../../images/bad-phone.png';
 
 const Hero = ({ navigation }) => {
+  const handleLoginPress = () => {
+    navigation.navigate('LoginPage');
+  };
+
+  const handleSignUpPress = () => {
+    navigation.navigate('SignUp');
+  };
+
   return (
     <View style={styles.backgroundIdea}>
       <View style={styles.container}>
@@ -18,18 +26,18 @@ const Hero = ({ navigation }) => {
               Meet and chat with crossdressers, femboys, sissies, trans women, and their admirers in your area. Free sign-up and chat, find sissies/crossdressers,
               trans women, and admirers in your area and filter by specific kinks.
             </Text>
-            {/* Use navigation.navigate to navigate to Login and Sign Up screens */}
+            {/* Use the handle functions for navigation */}
             <Button
               style={styles.button}
               title="Login"
-              color="#007BFF" // Adjust the color
-              onPress={() => navigation.navigate('LoginPage')}
+              color="#007BFF"
+              onPress={handleLoginPress}
             />
             <Button
               style={styles.button}
               title="Sign Up"
-              color="#6c757d" // Adjust the color
-              onPress={() => navigation.navigate('SignUp')}
+              color="#6c757d"
+              onPress={handleSignUpPress}
             />
           </View>
         </View>

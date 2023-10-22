@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
 import auth from '../../utils/auth';
-import { Text, TextInput, Button, View } from 'react-native';
+import { Text, TextInput, Button, View, StyleSheet } from 'react-native';
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ identifier: '', password: '' });
@@ -63,5 +63,26 @@ const Login = (props) => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  input: {
+    width: '80%',
+    margin: 10,
+    padding: 10,
+    borderWidth: 1,
+  },
+  errorText: {
+    color: 'red',
+    marginBottom: 10,
+  },
+  button: {
+    marginTop: 10,
+  },
+});
 
 export default Login;

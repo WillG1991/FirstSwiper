@@ -90,7 +90,7 @@ export default function App() {
         <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Dashboards" component={Dashboards} />
-            <Stack.Screen name="Login" component={LoginPage} />
+            <Stack.Screen name="LoginPage" component={LoginPage} />
             <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
             <Stack.Screen name="About" component={About} />
             <Stack.Screen name="Support" component={Support} />

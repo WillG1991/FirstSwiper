@@ -57,7 +57,7 @@ const Home = () => {
         <View style={styles.content}>
           <View style={styles.homeAppBar}>
             <HomeNav />
-            <Hero />
+            <Hero navigation={navigation} />
             <About />
             <Footer />
           </View>
